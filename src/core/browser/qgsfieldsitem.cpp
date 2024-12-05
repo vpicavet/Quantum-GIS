@@ -46,7 +46,7 @@ QgsFieldsItem::QgsFieldsItem( QgsDataItem *parent,
       mTableProperty = std::make_unique<QgsAbstractDatabaseProviderConnection::TableProperty>( conn->table( schema, tableName ) );
       if ( conn->capabilities() & QgsAbstractDatabaseProviderConnection::Capability::RenameField )
       {
-        mCanRename = true;
+        mCanRename = false;
       }
     }
     catch ( QgsProviderConnectionException &ex )
